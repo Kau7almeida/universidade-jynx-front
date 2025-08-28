@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./alunos.css">
+    <script defer src="./alunos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Universidade JYNX - Alunos</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="title-header">
+                <p class="title-jynx">Universidade JYNX</p>
+                <p>|</p>
+                <p>Administrador</p>
+            </div>
+            <nav>
+                <a href="../dashboard/dash.html">Dashboard</a>
+                <a href="../admin/adm.html">Admin</a>
+                <a href="#">Alunos</a>
+                <a href="../chamada/chamada.html">Chamada</a>
+                <a href="">Notebooks</a>
+                <a href="">Lançamentos</a>
+                <a href="">Chat</a>
+                <button class="logout" onclick="logout()">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="status">
+                <h1>Alunos</h1>
+                <div class="msg-hours">
+                    <p>Gerenciar alunos da universidade</p>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="header-content">
+
+                    <div class="search">
+                        <input type="text" placeholder="Buscar alunos...">
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="">Turma A - Quinta</option>
+                            <option value="">Turma B - Quinta</option>
+                        </select>
+                    </div>
+
+                    <div class="btn">
+                        <button class="excel">Exportar Excel</button>
+                        <button class="add-aluno">Adicionar Aluno</button>
+                    </div>
+
+                </div>
+
+                <div class="table">
+
+                    <div class="thead">
+                        <input type="checkbox" name="" id="">
+                        <p>Nome</p>
+                        <p>E-mail</p>
+                        <p>Telefone</p>
+                        <p>Turma</p>
+                        <p>Ações</p>
+                    </div>
+
+                    <div id="tbody">
+
+                        <div class="tr">
+                            <input type="checkbox" name="" id="" class="td">
+                            <p class="td">Kauã Almeida</p>
+                            <p class="td">kaua.almeida@jynx.com</p>
+                            <p class="td ctt">(11) 98416-0411</p>
+                            <p class="td">Turma A - Quinta</p>
+                            <p class="td remove">Remover</p>
+                        </div>
+
+                        <div class="tr">
+                            <input type="checkbox" name="" id="" class="td">
+                            <p class="td">Kauã Almeida</p>
+                            <p class="td">kaua.almeida@jynx.com</p>
+                            <p class="td ctt">(11) 98416-0411</p>
+                            <p class="td">Turma A - Quinta</p>
+                            <p class="td remove">Remover</p>
+                        </div>
+
+                        <div class="tr">
+                            <input type="checkbox" name="" id="" class="td">
+                            <p class="td">Kauã Almeida</p>
+                            <p class="td">kaua.almeida@jynx.com</p>
+                            <p class="td ctt">(11) 98416-0411</p>
+                            <p class="td">Turma A - Quinta</p>
+                            <p class="td remove">Remover</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
