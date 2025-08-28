@@ -1,7 +1,7 @@
 function logout(){
-    window.location.href = '../login/index.html'
+    window.location.href = '/login/'
 }
 
 function chamada(){
-    window.location.href = '../chamada/chamada.html'
+    window.location.href = '/chamada/'
 }

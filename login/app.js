@@ -1,3 +1,3 @@
 function login(){
-    window.location.href = '../dashboard/dash.html'
+    window.location.href = '/dashboard/'
 }
