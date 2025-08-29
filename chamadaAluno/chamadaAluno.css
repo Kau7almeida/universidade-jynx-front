@@ -131,3 +131,58 @@ main {
         }
     }
 }
+
+@media (max-width: 900px) {
+  main .container #content { padding: 16px; }
+  main .container #content .box { width: 60%; max-width: 560px; }
+}
+
+@media (max-width: 680px) {
+  main { margin-top: 20px; }
+  main .container { gap: 20px; }
+
+  main .container .status .msg-hours {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  main .container .status .msg-hours .flex-hours { gap: 8px; flex-wrap: wrap; }
+
+  main .container #content {
+    height: auto;
+    min-height: 360px;
+    padding: 16px;
+  }
+
+  main .container #content .box {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 12px;
+  }
+
+  main .container #content .box .header {
+    height: auto;
+    min-height: 64px;
+  }
+  main .container #content .box .header h2 { text-align: center; }
+
+  main .container #content .box .form-control { gap: 8px; }
+  main .container #content .box .form-control select,
+  main .container #content .box .form-control input { height: 44px; }
+  main .container #content .box .form-control .flex-label { flex-wrap: wrap; }
+
+  main .container #content .box .btn { padding: 0 16px 16px 16px; }
+  main .container #content .box .btn button { height: 48px; }
+
+  main .container #finaly {
+    height: auto;
+    min-height: 360px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  main .container #content { padding: 12px; }
+  main .container #content .box { max-width: 100%; }
+  main .container #content .box .form-control { padding: 0 12px; }
+}
