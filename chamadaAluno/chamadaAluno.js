@@ -26,7 +26,7 @@ async function buscaUnidades() {
     }
 
 }
-buscaUnidades()
+// buscaUnidades()
 
 async function realizarChamada() {
 
