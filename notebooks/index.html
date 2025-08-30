@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./notebooks.css">
+    <script defer src="./notebooks.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Universidade JYNX - Notebooks</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="title-header">
+                <p class="title-jynx">Universidade JYNX</p>
+                <p>|</p>
+                <p>Administrador</p>
+            </div>
+            <nav>
+                <a href="/dashboard/">Dashboard</a>
+                <a href="/admin/">Admin</a>
+                <a href="/alunos/">Alunos</a>
+                <a href="/chamada/">Chamada</a>
+                <a href="#">Notebooks</a>
+                <a href="/lancamentos/">Lançamentos</a>
+                <a href="/chat/">Chat</a>
+                <button class="logout" onclick="logout()">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="status">
+                <h1>Gestão de Notebooks</h1>
+                <div class="msg-hours">
+                    <p>Controle de empréstimos e devoluções</p>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="novo-emprestimo">
+
+                    <strong>Novo Aluguel</strong>
+
+                    <div class="form-group">
+                        <label for="">Nome do Aluno</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Unidade</label>
+                        <select name="" id="">
+                            <option value="">Selecione</option>
+                            <option value="">Unidade 1</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Turma</label>
+                        <select name="" id="">
+                            <option value="">Selecione</option>
+                            <option value="">Unidade 1</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Período</label>
+                        <select name="" id="">
+                            <option value="">Selecione</option>
+                            <option value="">Unidade 1</option>
+                        </select>
+                    </div>
+
+                    <button>Registrar Aluguel</button>
+
+                </div>
+
+                <div class="emprestimos">
+
+                    <div class="flex-excel">
+                        <strong>Notebooks Alugados</strong>
+                        <button>Exportar Excel</button>
+                    </div>
+
+                    <div class="table">
+
+                        <div class="thead">
+                            <p>Aluno</p>
+                            <p>Data</p>
+                            <p>Status</p>
+                            <p>Ações</p>
+                        </div>
+
+                        <div class="tbody">
+
+                            <div class="tr">
+                                <p>Ana Costa</p>
+                                <p>30/08/2025</p>
+                                <p class="emprestado">Emprestado</p>
+                                <p class="devolver">Devolver</p>
+                            </div>
+
+                            <div class="tr">
+                                <p>Ana Costa</p>
+                                <p>30/08/2025</p>
+                                <p class="devolvido">Devolvido</p>
+                                <p>-</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

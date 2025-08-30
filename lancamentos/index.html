@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./lancamentos.css">
+    <script defer src="./lancamentos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+    <title>Universidade JYNX - Lançamentos</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="title-header">
+                <p class="title-jynx">Universidade JYNX</p>
+                <p>|</p>
+                <p>Administrador</p>
+            </div>
+            <nav>
+                <a href="/dashboard/">Dashboard</a>
+                <a href="/admin/">Admin</a>
+                <a href="/alunos/">Alunos</a>
+                <a href="/chamada/">Chamada</a>
+                <a href="/notebooks/">Notebooks</a>
+                <a href="#">Lançamentos</a>
+                <a href="/chat/">Chat</a>
+                <button class="logout" onclick="logout()">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <div class="status">
+                <h1>Lançamentos</h1>
+                <div class="msg-hours">
+                    <p>Registrar aulas e monitorias</p>
+                </div>
+            </div>
+
+            <div class="dash">
+
+                <div class="dash-box">
+                    <p>Total Acumulado</p>
+                    <p class="total">R$ 270,00</p>
+                </div>
+
+                <div class="dash-box">
+                    <p>Total de Aulas</p>
+                    <p class="total-aulas">1</p>
+                </div>
+
+                <div class="dash-box">
+                    <p>Total de Monitorias</p>
+                    <p class="total-monitorias">1</p>
+                </div>
+
+            </div>
+
+            <div class="content">
+
+                <div class="novo-emprestimo">
+
+                    <strong>Novo Lançamento</strong>
+
+                    <div class="form-group">
+                        <label for="">Tipo</label>
+                        <select name="" id="">
+                            <option value="">Aula</option>
+                            <option value="">Monitoria</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Turma</label>
+                        <select name="" id="">
+                            <option value="">Selecione</option>
+                            <option value="">Unidade 1</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Data</label>
+                        <input type="date">
+                    </div>
+
+                    <button>Registrar Lançamento</button>
+
+                </div>
+
+                <div class="emprestimos">
+
+                    <div class="flex-excel">
+                        <strong>Meus Lançamentos</strong>
+                        <button>Exportar Excel</button>
+                    </div>
+
+                    <div class="table">
+
+                        <div class="thead">
+                            <p>Data</p>
+                            <p>Tipo</p>
+                            <p>Turma</p>
+                            <p>Valor</p>
+                        </div>
+
+                        <div class="tbody">
+
+                            <div class="tr">
+                                <p>30/08/2025</p>
+                                <p class="aula">Aula</p>
+                                <p>Turma 1</p>
+                                <p class="valor">R$ 180,00</p>
+                            </div>
+
+                            <div class="tr">
+                                <p>30/08/2025</p>
+                                <p class="monitoria">Monitoria</p>
+                                <p>Turma 1</p>
+                                <p class="valor">R$ 90,00</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <strong class="strong">Distribuição por Tipo</strong>
+                    <div class="center">
+                        <canvas id="donut"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

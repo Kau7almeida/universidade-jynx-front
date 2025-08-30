@@ -9,8 +9,9 @@ body {
     background-color: #FAFAFA;
 }
 
-body::-webkit-scrollbar {        /* Chrome, Edge, Safari */
-  display: none;
+body::-webkit-scrollbar {
+    /* Chrome, Edge, Safari */
+    display: none;
 }
 
 header {
@@ -92,7 +93,7 @@ main {
                 display: flex;
                 justify-content: space-between;
 
-                p{
+                p {
                     color: #6b6b6b;
                 }
 
@@ -103,91 +104,131 @@ main {
             }
         }
 
-        .content-unidades-turmas {
+        .content {
             width: 100%;
-            height: 300px;
+            height: 400px;
             display: flex;
             justify-content: space-between;
 
-            .content {
-                background-color: white;
-                border-radius: 10px;
-                width: 48%;
+            .novo-emprestimo {
+                width: 28%;
                 height: 100%;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                background-color: #ffffff;
                 border: solid 1px #CCCCCC;
-                padding: 20px 15px;
+                border-radius: 15px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+                padding: 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
 
-                .flex-title {
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    input,
+                    select {
+                        height: 40px;
+                        border-radius: 5px;
+                        border: solid 1px;
+                    }
+
+                    textarea{
+                        height: 200px;
+                        border-radius: 5px;
+                        border: solid 1px;
+                        padding: 7px;
+                    }
+
+                }
+
+                button {
+                    padding: 7px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: #E46307;
+                    color: white;
+                    cursor: pointer;
+                    height: 40px;
+                }
+
+                button:hover {
+                    background-color: #e97a2b;
+                }
+
+            }
+
+            .emprestimos {
+                width: 68%;
+                height: 100%;
+                background-color: #ffffff;
+                border: solid 1px #CCCCCC;
+                border-radius: 15px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .flex-excel {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
 
                     button {
-                        border: none;
-                        background-color: #E46307;
-                        color: white;
-                        padding: 7px;
+                        padding: 10px 15px;
                         border-radius: 5px;
+                        border: none;
+                        color: white;
+                        background-color: rgb(5, 162, 5);
                         cursor: pointer;
                     }
 
                     button:hover {
-                        background-color: #da6504;
+                        background-color: rgb(32, 189, 32);
                     }
                 }
 
-                .continer-content {
-                    height: 80%;
+                .msgs{
+                    background-color: white;
+                    height: 90%;
+                    width: 100%;
+                    overflow-y: auto;
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-                    overflow-y: auto;
 
-                    .msg {
-                        background-color: #d8d8d8;
+                    .msg{
+                        width: 100%;
                         border-radius: 5px;
+                        border: #CCCCCC solid 1px;
+                        padding: 15px;
                         display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin: 0;
-                        padding: 5px 15px;
+                        flex-direction: column;
+                        gap: 5px;
 
-                        .flex-msg {
+                        .flex-msg{
                             display: flex;
-                            flex-direction: column;
-                            gap: 5px;
+                            justify-content: space-between;
+                            align-items: center;
 
-                            p {
-                                color: #E46307;
-                            }
-
-                            .hora {
-                                color: #353535;
-                            }
-
-                            .flex-turma{
-                                display: flex;
-                                gap: 5px;
-                                p{
-                                    color: #000;
-                                }
+                            .hr{
+                                color: #6b6b6b;
+                                font-size: 14px;
                             }
                         }
 
-                        svg {
-                            cursor: pointer;
+                        .txt{
+                            color: #515151;
                         }
-
 
                     }
+
                 }
+
             }
-
         }
-
     }
 }

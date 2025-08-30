@@ -9,6 +9,11 @@ body {
     background-color: #FAFAFA;
 }
 
+body::-webkit-scrollbar {        /* Chrome, Edge, Safari */
+  display: none;
+}
+
+
 header {
     background-color: #E46307;
     height: 100px;
@@ -87,6 +92,10 @@ main {
             .msg-hours {
                 display: flex;
                 justify-content: space-between;
+
+                p{
+                    color: #6b6b6b;
+                }
 
                 .flex-hours {
                     display: flex;

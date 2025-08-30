@@ -92,6 +92,10 @@ main {
                 display: flex;
                 justify-content: space-between;
 
+                p{
+                    color: #6b6b6b;
+                }
+
                 .flex-hours {
                     display: flex;
                     align-items: center;
