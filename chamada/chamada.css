@@ -9,8 +9,9 @@ body {
     background-color: #FAFAFA;
 }
 
-body::-webkit-scrollbar {        /* Chrome, Edge, Safari */
-  display: none;
+body::-webkit-scrollbar {
+    /* Chrome, Edge, Safari */
+    display: none;
 }
 
 
@@ -93,7 +94,7 @@ main {
                 display: flex;
                 justify-content: space-between;
 
-                p{
+                p {
                     color: #6b6b6b;
                 }
 
@@ -149,7 +150,7 @@ main {
                     cursor: pointer;
                 }
 
-                button:hover{
+                button:hover {
                     background-color: #494949;
                 }
             }
@@ -161,7 +162,7 @@ main {
             display: flex;
             justify-content: space-between;
 
-            .qrcode{
+            .qrcode {
                 background-color: #ffffff;
                 height: 100%;
                 width: 50%;
@@ -174,7 +175,7 @@ main {
                 justify-content: space-between;
                 align-items: center;
 
-                button{
+                button {
                     border: none;
                     padding: 10px 15px;
                     color: white;
@@ -183,29 +184,38 @@ main {
                     cursor: pointer;
                 }
 
-                a{
+                a {
                     font-size: 12px;
                     text-align: center;
                 }
 
-                button:hover{
+
+                button:hover {
                     background-color: rgb(12, 172, 12);
                 }
 
-                .qr{
+                .clear{
+                    background-color: red;
+                }
+
+                .clear:hover{
+                    background-color: rgb(255, 55, 55);
+                }
+
+                .qr {
                     width: 70%;
                     height: 60%;
                     display: flex;
                     justify-content: center;
 
-                    img{
+                    img {
                         width: 70%;
                         height: 100%;
                     }
                 }
             }
 
-            .content-chamada{
+            .content-chamada {
                 background-color: #ffffff;
                 height: 100%;
                 width: 48%;
@@ -213,6 +223,53 @@ main {
                 border-radius: 15px;
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                 padding: 20px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .table {
+                    height: 100%;
+
+
+                    .thead {
+                        height: 8%;
+                        background-color: #E46307;
+                        display: flex;
+                        justify-content: space-around;
+                        padding: 7px;
+
+                        p {
+                            width: 33%;
+                            color: white;
+                        }
+                    }
+
+                    #tbody {
+                        height: 92%;
+                        overflow-y: auto;
+
+                        .tr {
+                            height: 50px;
+                            border-top: solid 1px #CCCCCC;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            p{
+                                width: 33%;
+                            }
+
+                            svg{
+                                width: 33%;
+                                cursor: pointer;
+                            }
+                        }
+
+                    }
+
+                }
+
             }
         }
     }
