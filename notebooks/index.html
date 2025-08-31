@@ -51,34 +51,22 @@
 
                     <div class="form-group">
                         <label for="">Nome do Aluno</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Unidade</label>
-                        <select name="" id="">
-                            <option value="">Selecione</option>
-                            <option value="">Unidade 1</option>
-                        </select>
+                        <input type="text" id="txt_aluno">
                     </div>
 
                     <div class="form-group">
                         <label for="">Turma</label>
-                        <select name="" id="">
+                        <select name="" id="txt_classe">
                             <option value="">Selecione</option>
-                            <option value="">Unidade 1</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Período</label>
-                        <select name="" id="">
-                            <option value="">Selecione</option>
-                            <option value="">Unidade 1</option>
-                        </select>
+                        <label for="">Data</label>
+                        <input type="date" name="" id="txt_data">
                     </div>
 
-                    <button>Registrar Aluguel</button>
+                    <button onclick="cadastrar()">Registrar Aluguel</button>
 
                 </div>
 
@@ -94,25 +82,13 @@
                         <div class="thead">
                             <p>Aluno</p>
                             <p>Data</p>
+                            <p>Turma</p>
                             <p>Status</p>
                             <p>Ações</p>
+                            <p>Excluir</p>
                         </div>
 
-                        <div class="tbody">
-
-                            <div class="tr">
-                                <p>Ana Costa</p>
-                                <p>30/08/2025</p>
-                                <p class="emprestado">Emprestado</p>
-                                <p class="devolver">Devolver</p>
-                            </div>
-
-                            <div class="tr">
-                                <p>Ana Costa</p>
-                                <p>30/08/2025</p>
-                                <p class="devolvido">Devolvido</p>
-                                <p>-</p>
-                            </div>
+                        <div id="tbody">
 
                         </div>
 
