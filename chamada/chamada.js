@@ -4,7 +4,7 @@ function logout() {
 
 async function buscaChamada() {
 
-    let endpoint = 'http://127.0.0.1:3333/call/getAllCall'
+    let endpoint = 'http://universidade-jynx-back.onrender.com/call/getAllCall'
 
     let response = await fetch(endpoint)
     let data = await response.json()
@@ -56,7 +56,7 @@ async function excluirChamada(id) {
 
 async function limparChamada() {
 
-    let endpoint = `http://127.0.0.1:3333/call/delete`
+    let endpoint = `http://universidade-jynx-back.onrender.com/call/delete`
 
     let response = await fetch(endpoint, {
         method: 'DELETE'

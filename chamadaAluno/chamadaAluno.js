@@ -6,7 +6,7 @@ function finalizar() {
 
 async function buscaUnidades() {
 
-    let endpoint = 'http://127.0.0.1:3333/classe/getAllClasses'
+    let endpoint = 'http://universidade-jynx-back.onrender.com/classe/getAllClasses'
 
     let response = await fetch(endpoint)
     let data = await response.json()
@@ -38,7 +38,7 @@ async function realizarChamada() {
         return
     }
 
-    let endpoint = 'http://127.0.0.1:3333/call/post'
+    let endpoint = 'http://universidade-jynx-back.onrender.com/call/post'
 
     let post = {
         name: aluno,
