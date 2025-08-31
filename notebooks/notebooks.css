@@ -9,8 +9,9 @@ body {
     background-color: #FAFAFA;
 }
 
-body::-webkit-scrollbar {        /* Chrome, Edge, Safari */
-  display: none;
+body::-webkit-scrollbar {
+    /* Chrome, Edge, Safari */
+    display: none;
 }
 
 header {
@@ -92,7 +93,7 @@ main {
                 display: flex;
                 justify-content: space-between;
 
-                p{
+                p {
                     color: #6b6b6b;
                 }
 
@@ -210,12 +211,12 @@ main {
                             height: 40px;
                             border-top: #CCCCCC solid 1px;
 
-                            p{
+                            p {
                                 text-align: start;
                                 width: 100px;
                             }
 
-                            .emprestado{
+                            .emprestado {
                                 font-size: 12px;
                                 background-color: #e46307dd;
                                 color: rgba(249, 234, 72, 0.826);
@@ -226,7 +227,7 @@ main {
                                 border-radius: 10px;
                             }
 
-                            .devolvido{
+                            .devolvido {
                                 font-size: 12px;
                                 background-color: green;
                                 color: rgba(221, 255, 202, 0.826);
@@ -237,12 +238,12 @@ main {
                                 border-radius: 10px;
                             }
 
-                            .devolver{
+                            .devolver {
                                 color: green;
                                 cursor: pointer;
                             }
 
-                            .deletar{
+                            .deletar {
                                 color: red;
                                 cursor: pointer;
                             }
@@ -252,6 +253,125 @@ main {
                 }
 
             }
+        }
+    }
+}
+
+/* Até 768px: empilha e centraliza com boa área de toque */
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        /* altura flexível no mobile */
+        min-height: 100px;
+        /* preserva sua referência */
+        padding: 10px 0;
+        /* respiro vertical */
+    }
+
+    header {
+        .container {
+            width: 92%;
+            flex-direction: column;
+            /* título em cima, nav abaixo */
+            align-items: center;
+            gap: 10px;
+
+            .title-header {
+                justify-content: center;
+                text-align: center;
+                margin: 10px 0;
+
+                .title-jynx {
+                    font-size: 18px;
+                    /* leve redução para caber melhor */
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+                /* centraliza ações/links */
+                gap: 8px 12px;
+                flex-wrap: wrap;
+                /* permite quebrar em 2 linhas */
+
+                button {
+                    width: 60px;
+                    height: 20px;
+                    /* alvo de toque mais confortável */
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+
+    main {
+        .container {
+            width: 92%;
+
+            .content {
+                flex-direction: column;
+                gap: 40px;
+
+                .novo-emprestimo {
+                    width: 100%;
+                    gap: 20px;
+                }
+
+                .emprestimos {
+                    width: 100%;
+
+                    .table {
+                        overflow-x: auto;
+                    }
+
+                    .table .thead {
+                        padding: 7px 20px;
+                        /* reduz padding lateral */
+                        min-width: 560px;
+                        /* evita colapso das colunas */
+                        gap: 10px;
+                    }
+
+                    .table .thead p {
+                        width: auto;
+                        /* colunas mais flexíveis */
+                        min-width: 110px;
+                        /* largura mínima legível */
+                    }
+
+                    .table #tbody .tr {
+                        padding: 7px 20px;
+                        /* reduz padding lateral */
+                        height: auto;
+                        /* evita cortar conteúdo */
+                        min-width: 560px;
+                        /* alinha com thead para scroll horizontal */
+                        gap: 10px;
+                    }
+
+                    .table #tbody .tr p {
+                        width: auto;
+                        min-width: 110px;
+                    }
+
+                    /* Badges/status em tamanho confortável no mobile */
+                    .table #tbody .tr .emprestado,
+                    .table #tbody .tr .devolvido {
+                        font-size: 11px;
+                        padding: 2px 8px;
+                        border-radius: 8px;
+                    }
+
+
+                }
+
+            }
+
         }
     }
 }
