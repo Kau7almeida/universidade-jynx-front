@@ -246,7 +246,7 @@ main {
                     }
 
                     #tbody {
-                        height: 92%;
+                        height: 90%;
                         overflow-y: auto;
 
                         .tr {
