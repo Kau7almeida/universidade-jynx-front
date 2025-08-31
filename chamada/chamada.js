@@ -44,7 +44,7 @@ buscaChamada()
 
 async function excluirChamada(id) {
 
-    let endpoint = `http://127.0.0.1:3333/call/deleteCalls/${id}`
+    let endpoint = `https://universidade-jynx-back.onrender.com/call/deleteCalls/${id}`
 
     let response = await fetch(endpoint, {
         method: 'DELETE'
