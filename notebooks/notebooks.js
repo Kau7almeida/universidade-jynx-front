@@ -126,3 +126,46 @@ async function buscaUnidades() {
 
 }
 buscaUnidades()
+
+
+// Exporta o conteúdo já renderizado em #tbody para Excel (CSV)
+function exportarExcel() {
+    var tbody = document.getElementById('tbody');
+    if (!tbody) {
+        console.error('Elemento #tbody não encontrado. Chame exportarExcel() após renderizar a tabela.');
+        return;
+    }
+
+    // Cabeçalhos
+    var linhas = [["Aluno", "Data", "Turma", "Status"]];
+
+    // Coleta das linhas existentes
+    var rows = tbody.getElementsByClassName('tr');
+    for (var i = 0; i < rows.length; i++) {
+        var ps = rows[i].getElementsByTagName('p');
+        var aluno = ps.length > 0 ? (ps[0].textContent || '').trim() : '';
+        var data = ps.length > 1 ? (ps[1].textContent || '').trim() : '';
+        var turma = ps.length > 1 ? (ps[2].textContent || '').trim() : '';
+        var status = ps.length > 1 ? (ps[3].textContent || '').trim() : '';
+        linhas.push([aluno, data, turma, status]);
+    }
+
+    // Montagem do CSV (separador ;, com BOM para acentos)
+    var csv = '\uFEFF' + linhas.map(function (linha) {
+        return linha.map(function (v) {
+            v = String(v == null ? '' : v);
+            return /[;"\n\r]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+        }).join(';');
+    }).join('\n');
+
+    // Download
+    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    var url = (window.URL || window.webkitURL).createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'notebooks_alugados' + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    (window.URL || window.webkitURL).revokeObjectURL(url);
+}
