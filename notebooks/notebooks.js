@@ -117,7 +117,7 @@ async function buscaUnidades() {
         let container = document.querySelector('#txt_classe')
 
         let html = `
-        <option value="${cadaTurma.classe_id}">${cadaTurma.name}</option>
+        <option value="${cadaTurma.name}">${cadaTurma.name}</option>
         `
 
         container.innerHTML += html
