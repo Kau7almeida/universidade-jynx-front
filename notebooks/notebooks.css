@@ -201,7 +201,7 @@ main {
                     }
 
                     #tbody {
-                        height: 65%;
+                        height: 350px;
                         overflow-y: auto;
 
                         .tr {
