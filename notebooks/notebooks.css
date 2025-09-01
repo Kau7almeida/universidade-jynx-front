@@ -201,6 +201,9 @@ main {
                     }
 
                     #tbody {
+                        height: 65%;
+                        overflow-y: auto;
+
                         .tr {
                             padding: 7px;
                             width: 100%;
